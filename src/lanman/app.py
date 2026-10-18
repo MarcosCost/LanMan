@@ -8,8 +8,10 @@ class LanmanApp(App):
     BINDINGS = [
         Binding("q", "app.quit", "quit"),
         Binding("h", "help", "help"),
-        Binding("ctrl+q", "app.noop", show=False)
+        Binding("ctrl+q", "app.noop", show=False),
+        Binding("t", "change_theme", "Themes")
     ]
+    ENABLE_COMMAND_PALETTE = False
 
     def action_help(self) -> None:
         if not isinstance(self.screen, HelpScreen):
