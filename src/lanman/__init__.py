@@ -1,0 +1,1 @@
+from lanman.app import main
