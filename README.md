@@ -10,31 +10,15 @@ Built with [Textual](https://textual.textualize.io/).
 - **Package Managers**: scans for language package managers (pip, uv, npm, cargo, gem, etc.)
 - Lists every installation found across `PATH`, not just the first
 - Shows version and resolved path (including symlink targets) for each entry
-- Themes, help popup, keyboard-driven navigation
+- Themes
 
-## Requirements
+## Install
 
-- Python 3.11+
-- [uv](https://docs.astral.sh/uv/)
-
-## Run
+Linux only.Download the latest binary (no Python or uv needed):
 
 ```
-git clone git@github.com:MarcosCost/LanMan.git
-cd LanMan
-uv run lanman
-```
-
-## Install\
-
-```
-uv tool install .
-```
-
-Or editable, for development:
-
-```
-uv tool install -e .
+curl -L -o lanman https://github.com/<you>/<repo>/releases/latest/download/lanman-linux
+chmod +x lanman && sudo mv lanman /usr/local/bin/
 ```
 
 Then run `lanman` from anywhere.
@@ -50,6 +34,22 @@ Then run `lanman` from anywhere.
 | `t` | Change theme |
 | `q` | Quit (main menu) |
 
+## Development
+
+Requirements: Python 3.11+ and [uv](https://docs.astral.sh/uv/).
+
+```
+git clone https://github.com/<you>/<repo>
+cd LanMan
+uv run lanman
+```
+
+Install it as a command from source (editable):
+
+```
+uv tool install -e .
+```
+
 ## Project layout
 
 ```
@@ -59,7 +59,11 @@ src/lanman/
 ├── screens/
 |   ├── menu.py
 |   ├── languages.py
-|   └── package_managers.py
+|   └── pac_man.py
 └── popups/
+    └── help.py
 ```
 
+# Next Planned features:
+
+- Language and tool Installer

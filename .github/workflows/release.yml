@@ -1,0 +1,30 @@
+# Commit and push changes to main.
+# bump `version` in pyproject.toml.
+# Tag and push:
+#   git tag v0.1.0
+#   git push --tags
+# This workflow builds the binary and publishes it as a GitHub release.
+#
+# IF IT FAILS: fix it, delete the tag, re-tag:
+#      git tag -d v0.1.0 && git push --delete origin v0.1.0
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync
+      - run: uv run --with pyinstaller pyinstaller --onefile --name lanman --paths src --collect-data textual src/lanman/__main__.py
+      - run: mv dist/lanman dist/lanman-linux
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: dist/lanman-linux
