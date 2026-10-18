@@ -1,3 +1,4 @@
+from lanman.screens.pac_man import PackageManagersScreen
 from lanman.screens.languages import LanguagesScreen
 from textual.widgets import Footer
 from rich.text import Text
@@ -54,5 +55,7 @@ class MenuScreen(Screen):
         match event.option_index:
             case 0:
                 self.app.push_screen(LanguagesScreen())
+            case 1:
+                self.app.push_screen(PackageManagersScreen())
             case 3:
                 self.app.exit()
