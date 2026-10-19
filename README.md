@@ -1,5 +1,4 @@
-# LanMan
-
+# LanMan 0.1.1
 A terminal UI for seeing which programming languages and language package managers are installed on your machine, where they live, and what versions you have.
 
 Built with [Textual](https://textual.textualize.io/).
@@ -10,6 +9,7 @@ Built with [Textual](https://textual.textualize.io/).
 - **Package Managers**: scans for language package managers (pip, uv, npm, cargo, gem, etc.)
 - Lists every installation found across `PATH`, not just the first
 - Shows version and resolved path (including symlink targets) for each entry
+- Automatically notifies when github has been updated
 - Themes
 
 ## Install

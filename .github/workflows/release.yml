@@ -23,8 +23,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v5
       - run: uv sync
-      - run: uv run --with pyinstaller pyinstaller --onefile --name lanman --paths src --collect-data textual src/lanman/__main__.py
-      - run: mv dist/lanman dist/lanman-linux
+      - run: uv run --with pyinstaller pyinstaller --onefile --name lanman --paths src --collect-data textual --copy-metadata lanman src/lanman/__main__.py      - run: mv dist/lanman dist/lanman-linux
       - uses: softprops/action-gh-release@v2
         with:
           files: dist/lanman-linux
