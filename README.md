@@ -3,6 +3,9 @@ A terminal UI for seeing which programming languages and language package manage
 
 Built with [Textual](https://textual.textualize.io/).
 
+## Showcase
+<p align="center"> <img src="assets/home.png" alt="LanMan home screen" width="48%"> <img src="assets/languages.png" alt="LanMan languages screen" width="48%"> </p>
+
 ## Features
 
 - **Languages**: scans `PATH` for installed languages (Python, Node, Rust, Go, Java, etc.)
