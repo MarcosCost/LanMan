@@ -17,7 +17,7 @@ Built with [Textual](https://textual.textualize.io/).
 Linux only.Download the latest binary (no Python or uv needed):
 
 ```
-curl -L -o lanman https://github.com/<you>/<repo>/releases/latest/download/lanman-linux
+curl -L -o lanman https://github.com/MarcosCost/LanMan/releases/latest/download/lanman-linux
 chmod +x lanman && sudo mv lanman /usr/local/bin/
 ```
 
@@ -39,7 +39,7 @@ Then run `lanman` from anywhere.
 Requirements: Python 3.11+ and [uv](https://docs.astral.sh/uv/).
 
 ```
-git clone https://github.com/<you>/<repo>
+git clone https://github.com/MarcosCost/LanMan
 cd LanMan
 uv run lanman
 ```
